@@ -1,0 +1,66 @@
+<html>
+<title>
+  UBD
+</title>
+<style>
+  div{
+    width: 96px;
+    height: 48px;
+    border: 2px solid #000;
+    border-bottom: 50px solid #000;
+    border-radius: 50%;
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    transition:all 2s ease;
+  }
+  div:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 20px solid #000;
+    background: #ffffff;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+
+  }
+
+  div:after{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 20px solid #fff;
+    background: #000;
+    border-radius: 50%;
+    right: 0;
+    top: 50%;
+
+  }
+
+
+</style>
+
+<script>
+
+  window.onload=function (ev) {
+
+    var div = document.querySelector("div")
+    div.onmouseover=function (ev2) {
+
+      div.style.transform="rotate(180deg)";
+
+    }
+
+  }
+
+</script>
+<body>
+<div></div>
+</body>
+</html>
